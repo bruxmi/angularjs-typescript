@@ -1,6 +1,5 @@
 var HeaderCtrl = (function () {
     function HeaderCtrl() {
-        console.log("HeaderCtrl loaded");
         this.type = "I got it";
     }
     return HeaderCtrl;

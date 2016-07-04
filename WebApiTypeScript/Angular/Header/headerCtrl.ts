@@ -4,7 +4,6 @@
 class HeaderCtrl {
     type: string;
     constructor() {
-        console.log("HeaderCtrl loaded");
         this.type = "I got it";
     }
 }
