@@ -29,11 +29,13 @@ namespace WebApiTypeScript
                 "~/Scripts/angular-cookies.js",
                 "~/Scripts/angular-route.js",
                 "~/Scripts/angular-sanitize.js",
-                "~/Scripts/angular-ui-router.js"));
+                "~/Scripts/angular-ui-router.js",
+                "~/Scripts/ui-grid.js"));
             
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/ui-grid.css"));
         }
     }
 }
