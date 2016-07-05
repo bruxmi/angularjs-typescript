@@ -1,11 +1,16 @@
-﻿var app = angular.module('TypeScriptApp', ['ngRoute', 'ui.grid', 'ui.grid.edit'])
-app.config(["$routeProvider", routeConfig]);
+﻿module app {
+    angular.module("common.services", ["ngResource"])
+    var application = angular.module('TypeScriptApp', ["ngRoute", "ui.grid", "ui.grid.edit", "common.services"])
 
-function routeConfig($routeProvider: ng.route.IRouteProvider): void {
-    $routeProvider
-        .when("/", {
-            templateUrl: "Angular/Header/header.html",
-            controller: "HeaderCtrl"
-        })
-        .otherwise("/");
+
+    application.config(["$routeProvider", routeConfig]);
+
+    function routeConfig($routeProvider: ng.route.IRouteProvider): void {
+        $routeProvider
+            .when("/", {
+                templateUrl: "Angular/User/user.html",
+                controller: "UserCtrl"
+            })
+            .otherwise("/");
+    }
 }

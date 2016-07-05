@@ -30,7 +30,8 @@ namespace WebApiTypeScript
                 "~/Scripts/angular-route.js",
                 "~/Scripts/angular-sanitize.js",
                 "~/Scripts/angular-ui-router.js",
-                "~/Scripts/ui-grid.js"));
+                "~/Scripts/ui-grid.js",
+                "~/Scripts/angular-resource.js"));
             
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
