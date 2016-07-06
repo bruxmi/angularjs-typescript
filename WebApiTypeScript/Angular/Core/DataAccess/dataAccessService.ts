@@ -1,7 +1,9 @@
 ﻿module app.common.dataAccess {
 
     export interface IDataAccessService {
-        get: (url: string) => ng.IHttpPromise<any>;
+        getAll(url: string) : ng.IPromise<any>;
+        get(url: string, id: number): ng.IPromise<any>;
+
     }
 
     export class DataAccessService implements IDataAccessService {
@@ -10,8 +12,12 @@
         }
 
 
-        get(url: string) {
+        getAll(url: string): ng.IPromise<any> {
             return this.$http.get('/api/' + url);
+        }
+
+        get(url: string, id: number): ng.IPromise<any> {
+            return this.$http.get('/api/' + url + "/" + id);
         }
     }
     angular.module("common.services").service("dataAccessService", ['$http', '$q', DataAccessService]);

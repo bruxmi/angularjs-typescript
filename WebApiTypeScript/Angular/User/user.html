@@ -1,3 +1,17 @@
-﻿<div class="col-md-12">
-    <div id="grid1" ui-grid="User.gridOptions" ui-grid-edit class="grid"></div>
+﻿<div class="panel panel-primary">
+    <div class="panel-heading">
+        User Table
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary" ng-click="User.getUserById()">
+                    Get User By Id
+                </button>
+            </div>
+            <span>CurrentUser firstName: {{User.currentUser.firstName}}</span><br />
+            <span>CurrentUser lastName: {{::User.currentUser.lastName}}</span>
+            <div id="grid1" ui-grid="User.gridOptions" ui-grid-edit class="grid col-md-19"></div>
+        </div>
+    </div>
 </div>
