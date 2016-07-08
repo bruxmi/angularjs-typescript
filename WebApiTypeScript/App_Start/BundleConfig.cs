@@ -20,18 +20,20 @@ namespace WebApiTypeScript
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/angularServices").IncludeDirectory(
-                "~/Angular", "*.js", true));
-
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                "~/Scripts/angular.js",
-                "~/Scripts/angular-animate.js",
-                "~/Scripts/angular-cookies.js",
-                "~/Scripts/angular-route.js",
-                "~/Scripts/angular-sanitize.js",
-                "~/Scripts/angular-ui-router.js",
-                "~/Scripts/ui-grid.js",
-                "~/Scripts/angular-resource.js"));
+                    "~/Scripts/angular.js",
+                    "~/Scripts/angular-animate.js",
+                    "~/Scripts/angular-cookies.js",
+                    "~/Scripts/angular-route.js",
+                    "~/Scripts/angular-sanitize.js",
+                    "~/Scripts/angular-ui-router.js",
+                    "~/Scripts/ui-grid.js",
+                    "~/Scripts/angular-resource.js",
+                    "~/Scripts/ui-bootstrap.js",
+                    "~/Scripts/ui-bootstrap-tpls.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularServices").IncludeDirectory(
+                    "~/Angular", "*.js", true));
             
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

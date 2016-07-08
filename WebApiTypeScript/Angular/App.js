@@ -1,7 +1,9 @@
 var app;
 (function (app) {
     angular.module("common.services", ["ngResource"]);
-    var application = angular.module('TypeScriptApp', ["ngRoute", "ui.grid", "ui.grid.edit", "common.services"]);
+    angular.module("common.widgets", ["ngAnimate", "ui.bootstrap"]);
+    var appDependencies = ["ngRoute", "ui.grid", "ui.grid.edit", "common.services", "common.widgets"];
+    var application = angular.module('TypeScriptApp', appDependencies);
     application.config(["$routeProvider", routeConfig]);
     function routeConfig($routeProvider) {
         $routeProvider
