@@ -1,12 +1,5 @@
 ﻿module app.common.widgets {
 
-    export interface IDatepickerCtrl {
-        format: string;
-        isOpen: boolean;
-        open(): void;
-        popupPlacement: string;
-    }
-
     interface IDatepickerScope {
         ngModel: string,
         minDate: string,
@@ -17,7 +10,44 @@
         pickerCss: string,
         ngRequired: string,
         ngReadonly: string,
-        placement: string
+        placement: string,
+    }
+
+    class DatePickerScope implements IDatepickerScope {
+        ngModel: string;
+        minDate: string;
+        maxDate: string;
+        pickerLabel: string;
+        placeholder: string;
+        pickerName: string;
+        pickerCss: string;
+        ngRequired: string;
+        ngReadonly: string;
+        placement: string;
+
+        static instance(): IDatepickerScope {
+            return new DatePickerScope;
+        } 
+
+        constructor() {
+            this.ngModel = '=';
+            this.minDate = '=';
+            this.maxDate = '=';
+            this.pickerLabel = '@';
+            this.placeholder= '@';
+            this.pickerName = '@';
+            this.pickerCss = '@';
+            this.ngRequired = '=';
+            this.ngReadonly= '=';
+            this.placement = '@?';
+        }
+    }
+
+    export interface IDatepickerCtrl {
+        format: string;
+        isOpen: boolean;
+        open(): void;
+        popupPlacement: string;
     }
 
     export class DatepickerCtrl implements app.common.widgets.IDatepickerCtrl {
@@ -47,18 +77,7 @@
                 templateUrl: '/Angular/Core/Widgets/Datepicker/datepicker.html',
                 controller: DatepickerCtrl,
                 controllerAs: 'Datepicker',
-                scope: {
-                    ngModel: '=',
-                    minDate : '=',
-                    maxDate : '=',
-                    pickerLabel : '@',
-                    placeholder : '@',
-                    pickerName : '@',
-                    pickerCss : '@',
-                    ngRequired : '=',
-                    ngReadonly : '=',
-                    placement : '@?'
-                }
+                scope: DatePickerScope.instance()
             };
         });
 }

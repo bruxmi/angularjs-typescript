@@ -4,6 +4,24 @@ var app;
     (function (common) {
         var widgets;
         (function (widgets) {
+            var DatePickerScope = (function () {
+                function DatePickerScope() {
+                    this.ngModel = '=';
+                    this.minDate = '=';
+                    this.maxDate = '=';
+                    this.pickerLabel = '@';
+                    this.placeholder = '@';
+                    this.pickerName = '@';
+                    this.pickerCss = '@';
+                    this.ngRequired = '=';
+                    this.ngReadonly = '=';
+                    this.placement = '@?';
+                }
+                DatePickerScope.instance = function () {
+                    return new DatePickerScope;
+                };
+                return DatePickerScope;
+            }());
             var DatepickerCtrl = (function () {
                 function DatepickerCtrl($scope) {
                     this.$scope = $scope;
@@ -27,18 +45,7 @@ var app;
                     templateUrl: '/Angular/Core/Widgets/Datepicker/datepicker.html',
                     controller: DatepickerCtrl,
                     controllerAs: 'Datepicker',
-                    scope: {
-                        ngModel: '=',
-                        minDate: '=',
-                        maxDate: '=',
-                        pickerLabel: '@',
-                        placeholder: '@',
-                        pickerName: '@',
-                        pickerCss: '@',
-                        ngRequired: '=',
-                        ngReadonly: '=',
-                        placement: '@?'
-                    }
+                    scope: DatePickerScope.instance()
                 };
             });
         })(widgets = common.widgets || (common.widgets = {}));
