@@ -6,6 +6,7 @@
         currentUser: app.entity.IUser;
         gridOptions: uiGrid.IGridOptions;
         date: Date;
+        minDate: Date;
     }
 
     class UserCtrl implements IUserCtrl {
@@ -16,9 +17,11 @@
         isRequired: boolean;
         isReadonly: boolean;
         placement: string;
+        minDate: Date;
 
         constructor(private userDataService: app.user.UserDataService, private $q: ng.IQService) {
             this.currentUser = new app.entity.User();
+            this.minDate =  new Date();
             this.date = new Date();
             this.gridOptions = [];
             this.gridOptions.columnDefs = [

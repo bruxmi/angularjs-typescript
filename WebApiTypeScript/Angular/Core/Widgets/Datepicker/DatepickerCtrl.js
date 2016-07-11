@@ -25,7 +25,7 @@ var app;
             var DatepickerCtrl = (function () {
                 function DatepickerCtrl($scope) {
                     this.$scope = $scope;
-                    this.format = "dd.MM.yyyy";
+                    this.format = "dd/MM/yyyy";
                     this.isOpen = false;
                     this.$scope.placement = angular.isDefined(this.$scope.placement) ? $scope.placement : 'bottom-left';
                 }

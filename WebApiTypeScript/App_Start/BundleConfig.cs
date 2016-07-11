@@ -30,7 +30,9 @@ namespace WebApiTypeScript
                     "~/Scripts/ui-grid.js",
                     "~/Scripts/angular-resource.js",
                     "~/Scripts/ui-bootstrap.js",
-                    "~/Scripts/ui-bootstrap-tpls.js"));
+                    "~/Scripts/ui-bootstrap-tpls.js",
+                    "~/Scripts/moment.js",
+                    "~/Scripts/moment-with-locales.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angularServices").IncludeDirectory(
                     "~/Angular", "*.js", true));

@@ -57,7 +57,7 @@
         popupPlacement: string;
 
         constructor(private $scope: IDatepickerScope) {
-            this.format = "dd.MM.yyyy";
+            this.format = "dd/MM/yyyy";
             this.isOpen = false;
             this.$scope.placement = angular.isDefined(this.$scope.placement) ? $scope.placement : 'bottom-left';
         }

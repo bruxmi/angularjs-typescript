@@ -14,8 +14,10 @@
             <div class="row">
                 <datepicker class="col-md-3" picker-name="date"
                             placeholder=""
+                            datepicker-min="minDate"
                             placement="top-left"
                             ng-model="User.date"
+                            min-date="User.minDate"
                             ng-readonly="false"
                             ng-required="true">
                 </datepicker>

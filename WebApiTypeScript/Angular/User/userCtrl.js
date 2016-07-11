@@ -19,6 +19,7 @@ var app;
                     var reason = 'query for people failed.';
                 };
                 this.currentUser = new app.entity.User();
+                this.minDate = new Date();
                 this.date = new Date();
                 this.gridOptions = [];
                 this.gridOptions.columnDefs = [

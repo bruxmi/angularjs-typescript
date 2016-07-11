@@ -237,6 +237,10 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui-router.min.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\ui-bootstrap-tpls.js" />
     <Content Include="Scripts\ui-bootstrap-tpls.min.js" />
     <Content Include="Scripts\ui-bootstrap.js" />
@@ -1054,10 +1058,11 @@
     <Content Include="Scripts\version.json" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Angular\Core\Services\dateComperatorService.ts" />
     <TypeScriptCompile Include="Angular\Core\Widgets\Datepicker\DatepickerCtrl.ts" />
     <TypeScriptCompile Include="Angular\Core\Widgets\Datepicker\datepickerMinDirective.ts" />
     <TypeScriptCompile Include="Angular\Entity\User.ts" />
-    <TypeScriptCompile Include="Angular\Core\DataAccess\dataAccessService.ts" />
+    <TypeScriptCompile Include="Angular\Core\Services\DataAccess\dataAccessService.ts" />
     <TypeScriptCompile Include="Angular\User\userCtrl.ts" />
     <TypeScriptCompile Include="Angular\App.ts" />
     <TypeScriptCompile Include="Angular\User\userDataService.ts" />
@@ -1072,6 +1077,8 @@
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\moment\moment-node.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\moment\moment.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\ui-grid\ui-grid.d.ts" />
   </ItemGroup>
   <ItemGroup>
