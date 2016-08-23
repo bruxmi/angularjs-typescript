@@ -5,9 +5,8 @@ var app;
         var dataAccess;
         (function (dataAccess) {
             var DataAccessService = (function () {
-                function DataAccessService($http, $q) {
+                function DataAccessService($http) {
                     this.$http = $http;
-                    this.$q = $q;
                 }
                 DataAccessService.prototype.getAll = function (url) {
                     return this.$http.get('/api/' + url);
@@ -18,7 +17,7 @@ var app;
                 return DataAccessService;
             }());
             dataAccess.DataAccessService = DataAccessService;
-            angular.module("common.services").service("dataAccessService", ['$http', '$q', DataAccessService]);
+            angular.module("common.services").service("dataAccessService", ['$http', DataAccessService]);
         })(dataAccess = common.dataAccess || (common.dataAccess = {}));
     })(common = app.common || (app.common = {}));
 })(app || (app = {}));

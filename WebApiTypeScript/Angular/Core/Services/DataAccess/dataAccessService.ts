@@ -8,7 +8,7 @@
 
     export class DataAccessService implements IDataAccessService {
         
-        constructor(private $http: ng.IHttpService, private $q: ng.IQService) {
+        constructor(private $http: ng.IHttpService) {
         }
 
 
@@ -20,5 +20,5 @@
             return this.$http.get('/api/' + url + "/" + id);
         }
     }
-    angular.module("common.services").service("dataAccessService", ['$http', '$q', DataAccessService]);
+    angular.module("common.services").service("dataAccessService", ['$http', DataAccessService]);
 }

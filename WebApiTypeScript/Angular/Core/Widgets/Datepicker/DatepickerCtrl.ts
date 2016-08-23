@@ -13,7 +13,7 @@
         placement: string,
     }
 
-    class DatePickerScope implements IDatepickerScope {
+    export class DatePickerScope implements IDatepickerScope {
         ngModel: string;
         minDate: string;
         maxDate: string;
@@ -48,6 +48,7 @@
         isOpen: boolean;
         open(): void;
         popupPlacement: string;
+		date: string;
     }
 
     export class DatepickerCtrl implements app.common.widgets.IDatepickerCtrl {
@@ -55,8 +56,9 @@
         format: string;
         isOpen: boolean;
         popupPlacement: string;
-
+		date: string;
         constructor(private $scope: IDatepickerScope) {
+			this.date = $scope.ngModel;
             this.format = "dd/MM/yyyy";
             this.isOpen = false;
             this.$scope.placement = angular.isDefined(this.$scope.placement) ? $scope.placement : 'bottom-left';
@@ -74,7 +76,8 @@
             return {
                 restrict: 'E',
                 require: 'ngModel',
-                templateUrl: '/Angular/Core/Widgets/Datepicker/datepicker.html',
+                //templateUrl: '/Angular/Core/Widgets/Datepicker/datepicker.html',
+				template: "<div class=\"input-group\">"				+ "    <input type=\"text\""				+ "           id=\"{{pickerName}}\""				+ "           name=\"{{pickerName}}\""				+ "           class=\"form-control {{pickerCss}}\""				+ "           placeholder=\"{{placeholder}}\""				+ "           data-ng-model=\"ngModel\""				+ "           data-min-date=\"minDate\""				+ "           data-max-date=\"maxDate\""				+ "           datepicker-min=\"{{minDate}}\""				+ "           ng-disabled=\"ngReadonly\""				+ "           ng-required=\"ngRequired\""				+ "           placement=\"{{placement}}\""				+ "           uib-datepicker-popup=\"{{Datepicker.format}}\""				+ "           is-open=\"Datepicker.isOpen\""				+ "           show-button-bar=\"false\""				+ "           on-open-focus=\"true\""				+ "           close-on-date-selection=\"true\" />"				+ "    <label class=\"input-group-addon clickable\" for=\"{{pickerName}}\" ng-click=\"Datepicker.open()\">"				+ "        <span class=\"glyphicon glyphicon-calendar clickable\"></span>"				+ "    </label>"				+ "</div>",
                 controller: DatepickerCtrl,
                 controllerAs: 'Datepicker',
                 scope: DatePickerScope.instance()
