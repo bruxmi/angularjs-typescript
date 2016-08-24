@@ -22,6 +22,7 @@ module.exports = function (config) {
             'Scripts/angular-animate.js',
             'Scripts/angular-route.js',
             'Scripts/angular-resource.js',
+            'Scripts/moment.js',
             //'Scripts/angular-sanitize.js',
             //'Scripts/angular-cookies.js',
             //'Scripts/angular-translate.js',

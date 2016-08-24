@@ -4,30 +4,9 @@ var app;
     (function (common) {
         var widgets;
         (function (widgets) {
-            var DatePickerScope = (function () {
-                function DatePickerScope() {
-                    this.ngModel = '=';
-                    this.minDate = '=';
-                    this.maxDate = '=';
-                    this.pickerLabel = '@';
-                    this.placeholder = '@';
-                    this.pickerName = '@';
-                    this.pickerCss = '@';
-                    this.ngRequired = '=';
-                    this.ngReadonly = '=';
-                    this.placement = '@?';
-                }
-                DatePickerScope.instance = function () {
-                    return new DatePickerScope;
-                };
-                return DatePickerScope;
-            }());
-            widgets.DatePickerScope = DatePickerScope;
             var DatepickerCtrl = (function () {
                 function DatepickerCtrl($scope) {
                     this.$scope = $scope;
-                    this.date = $scope.ngModel;
-                    this.format = "dd/MM/yyyy";
                     this.isOpen = false;
                     this.$scope.placement = angular.isDefined(this.$scope.placement) ? $scope.placement : 'bottom-left';
                 }
@@ -52,16 +31,15 @@ var app;
                         + "           class=\"form-control {{pickerCss}}\""
                         + "           placeholder=\"{{placeholder}}\""
                         + "           data-ng-model=\"ngModel\""
-                        + "           data-min-date=\"minDate\""
-                        + "           data-max-date=\"maxDate\""
-                        + "           datepicker-min=\"{{minDate}}\""
+                        + "           datepicker-min=\"{{options.minDate}}\""
                         + "           ng-disabled=\"ngReadonly\""
                         + "           ng-required=\"ngRequired\""
                         + "           placement=\"{{placement}}\""
-                        + "           uib-datepicker-popup=\"{{Datepicker.format}}\""
+                        + "           uib-datepicker-popup=\"{{format}}\""
                         + "           is-open=\"Datepicker.isOpen\""
                         + "           show-button-bar=\"false\""
                         + "           on-open-focus=\"true\""
+                        + "			  datepicker-options=\"options\""
                         + "           close-on-date-selection=\"true\" />"
                         + "    <label class=\"input-group-addon clickable\" for=\"{{pickerName}}\" ng-click=\"Datepicker.open()\">"
                         + "        <span class=\"glyphicon glyphicon-calendar clickable\"></span>"
@@ -69,7 +47,18 @@ var app;
                         + "</div>",
                     controller: DatepickerCtrl,
                     controllerAs: 'Datepicker',
-                    scope: DatePickerScope.instance()
+                    scope: {
+                        'ngModel': '=',
+                        'pickerLabel': '@',
+                        'placeholder': '@',
+                        'pickerName': '@',
+                        'pickerCss': '@',
+                        'ngRequired': '=',
+                        'ngReadonly': '=',
+                        'placement': '@?',
+                        'format': '@',
+                        'options': '='
+                    }
                 };
             });
         })(widgets = common.widgets || (common.widgets = {}));
