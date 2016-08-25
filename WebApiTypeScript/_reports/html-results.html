@@ -68,7 +68,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <div id="refreshToggle" class="pull-right">
-                    <span id="timestamp">12:33:10</span>
+                    <span id="timestamp">16:37:46</span>
                     <button class="btn btn-danger" id="refreshBtn">Disable Refresh</button>
                 </div>
             </div>
@@ -89,13 +89,13 @@
                 <div class="row">
                     <div class="col-sm-2">
                         <div class="countBox info">
-                            <h2>7</h2>
+                            <h2>12</h2>
                             Total Tests
                         </div>
                     </div>
                     <div class="col-sm-2 col-sm-offset-1">
                         <div class="countBox success">
-                            <h2>7</h2>
+                            <h2>12</h2>
                             Passed Tests
                         </div>
                     </div>
@@ -165,6 +165,36 @@
     <td class="expand"/>
     <td class="status">Passed</td>
     <td>A Datepicker Directive :: a datepicker with a viewValue of a number should have an error object with date property set to true</td>
+    <td>Chrome 52.0.2743 (Windows 10 0.0.0)</td>
+  </tr>
+  <tr class="success">
+    <td class="expand"/>
+    <td class="status">Passed</td>
+    <td>A datepickerMinDirective  :: should detect that the date 30.03.2016 is lower than the min date 31.03.2016</td>
+    <td>Chrome 52.0.2743 (Windows 10 0.0.0)</td>
+  </tr>
+  <tr class="success">
+    <td class="expand"/>
+    <td class="status">Passed</td>
+    <td>A datepickerMinDirective  :: should detect that the date 31.03.2016 is equal than the min date 31.03.2016 and valid</td>
+    <td>Chrome 52.0.2743 (Windows 10 0.0.0)</td>
+  </tr>
+  <tr class="success">
+    <td class="expand"/>
+    <td class="status">Passed</td>
+    <td>A datepickerMinDirective  :: should detect that the date 31.03.2017 is greater than the min date 31.03.2016 and valid</td>
+    <td>Chrome 52.0.2743 (Windows 10 0.0.0)</td>
+  </tr>
+  <tr class="success">
+    <td class="expand"/>
+    <td class="status">Passed</td>
+    <td>A datepickerMinDirective  :: should not call isLowerOrEqualThan of dateComperatorService when no min date was set</td>
+    <td>Chrome 52.0.2743 (Windows 10 0.0.0)</td>
+  </tr>
+  <tr class="success">
+    <td class="expand"/>
+    <td class="status">Passed</td>
+    <td>A datepickerMinDirective  :: should call isLowerOrEqualThan of dateComperatorService when min date was set</td>
     <td>Chrome 52.0.2743 (Windows 10 0.0.0)</td>
   </tr>
 </table>

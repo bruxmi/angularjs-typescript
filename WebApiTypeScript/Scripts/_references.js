@@ -33,3 +33,4 @@
 /// <reference path="ui-grid.min.js" />
 /// <reference path="../tests/dataaccessservicespec.js" />
 /// <reference path="../tests/datepickerctrlspec.js" />
+/// <reference path="../tests/datepickermindirectivespec.js" />

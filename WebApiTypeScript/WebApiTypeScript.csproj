@@ -1052,6 +1052,7 @@
     <Content Include="Scripts\ui-grid.min.js" />
     <Content Include="Tests\dataAccessServiceSpec.js" />
     <Content Include="Tests\datepickerCtrlSpec.js" />
+    <Content Include="Tests\datepickerMinDirectiveSpec.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

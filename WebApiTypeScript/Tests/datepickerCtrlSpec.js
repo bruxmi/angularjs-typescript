@@ -19,13 +19,16 @@ describe('A Datepicker Directive', function () {
         $httpBackend.whenGET('uib/template/datepickerPopup/popup.html').respond(200, '');
         scope = $rootScope.$new();
         compile = $compile;
+    }));
+
+    beforeEach(function () {
         scope.displayformat = "dd.MM.yyyy";
         dirElement = angular.element('<form name="form"><datepicker class="col-md-3" options="options" format="{{displayformat}}" picker-name="mydate" placeholder="" placement="top-left" ng-model="ngModel" ng-readonly="false" ng-required="true"></form>');
         compile(dirElement)(scope);
         scope.$digest();
         dirElement.isolateScope();
         dirElementInput = dirElement.find('input');
-    }));
+    });
 
     it('a datepicker with format dd.MM.yyyy and date 2.4.2015 should display 2.3.2015', function () {
         scope.ngModel = new Date(2015, 3, 2);
