@@ -1,4 +1,4 @@
-﻿describe('A datepickerMinDirective ', function () {
+﻿describe('A datepickerMinDirective', function () {
 
     var element;
     var ngModelCtrl;
