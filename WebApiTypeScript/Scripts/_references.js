@@ -1,6 +1,5 @@
 ﻿/// <autosync enabled="true" />
 /// <reference path="../karma.conf.js" />
-/// <reference path="ai.0.15.0-build58334.min.js" />
 /// <reference path="angular.min.js" />
 /// <reference path="angular-animate.min.js" />
 /// <reference path="angular-aria.min.js" />
