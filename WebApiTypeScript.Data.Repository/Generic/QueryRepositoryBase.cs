@@ -12,12 +12,12 @@ using WebApiTypeScript.Core.Interfaces.Services.Query;
 
 namespace WebApiTypeScript.Data.Repository.Generic
 {
-	public abstract class QueryRepositoryBase<T>: IQueryRepository<T>
+	public class QueryRepositoryBase<T>: IQueryRepository<T>
 		where T : class, IEntity
 	{
 		private readonly IDbSet<T> dbSet;
 
-		protected QueryRepositoryBase(IRepositoryInitializer<T> initializer)
+		public QueryRepositoryBase(IRepositoryInitializer<T> initializer)
 		{
 			this.dbSet = initializer.GetDbSet();
 		}

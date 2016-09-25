@@ -1099,6 +1099,14 @@
       <Project>{8b37fd16-4249-4b91-bdc4-c343ba551cea}</Project>
       <Name>WebApiTypeScript.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebApiTypeScript.Data.AppContext\WebApiTypeScript.Data.AppContext.csproj">
+      <Project>{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}</Project>
+      <Name>WebApiTypeScript.Data.AppContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApiTypeScript.Data.Repository\WebApiTypeScript.Data.Repository.csproj">
+      <Project>{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1}</Project>
+      <Name>WebApiTypeScript.Data.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApiTypeScript.Registration\WebApiTypeScript.Registration.csproj">
       <Project>{0bab10e5-1756-4559-8a76-a237bb8157c5}</Project>
       <Name>WebApiTypeScript.Registration</Name>

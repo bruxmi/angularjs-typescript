@@ -1,43 +1,36 @@
-﻿using System;
+﻿using Autofac;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using WebApiTypeScript.Core;
+using WebApiTypeScript.Core.Entities;
+using WebApiTypeScript.Core.Interfaces.Repository.Query;
 using WebApiTypeScript.Core.Interfaces.Services.Query;
 
 namespace WebApiTypeScript.Api
 {
 	public class UserQueryController: ApiController
-    {
-
-		public UserQueryController(IUserQueryService queryService)
+	{
+		public UserQueryController()
 		{
-
+			//ist nur als test zu checken wieso er das ding nicht erzeugen kann 
+			var b = AppContainer.Current.Resolve<IQueryRepository<User>>();
 		}
-        public IHttpActionResult GetUsers()
+		public async Task<IHttpActionResult> GetUsers()
         {
-			var users = new List<User>();
-
-			for (int i = 0; i < 10; i++)
-			{
-				users.Add(new User { firstName = "Max " + (i + 1), lastName = "Mustermann " + (i + 1), id = (i + 1)  });
-			}
-            return Ok(users);
+			//var users = await this.Service.GetAllUserAsync();
+			return Ok();
         }
 
 
-        public IHttpActionResult GetUser(int id)
+        public async Task<IHttpActionResult> GetUser(int id)
         {
-            var users = new List<User> { new User { firstName = "Sarah", lastName = "Musterfrau", id = 2 } };
-            var result = users.FirstOrDefault(a => a.id == id);
-            return Ok(result);
-        }
-    }
-
-    public class User
-    {
-        public int id { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
+			//var user = await this.Service.GetUserByIdAsync(id);
+			//return Ok(user);
+			return Ok();
+		}
     }
 }

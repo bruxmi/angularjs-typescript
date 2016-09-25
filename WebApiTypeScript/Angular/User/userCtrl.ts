@@ -25,8 +25,8 @@
             this.date = new Date();
             this.gridOptions = [];
             this.gridOptions.columnDefs = [
-                { name: "firstName", displayName: "Vorname" },
-                { name: "lastName", displayName: "Nachname" }
+                { name: "FirstName", displayName: "Vorname" },
+                { name: "LastName", displayName: "Nachname" }
             ];
             this.getUser();
         }

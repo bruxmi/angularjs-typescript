@@ -11,7 +11,9 @@ namespace WebApiTypeScript.Data.Repository.Generic
 	public class QueryRepository<T>: QueryRepositoryBase<T>
 		where T : class, IEntity
 	{
-		public QueryRepository(RepositoryAppInitializer<T> initializer): 
+
+		//Hier sitzt das Problem
+		public QueryRepository(RepositoryAppInitializer<T> initializer) :
 			base(initializer)
 		{
 

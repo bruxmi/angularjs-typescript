@@ -1,11 +1,16 @@
-﻿using Autofac.Integration.WebApi;
+﻿using Autofac;
+using Autofac.Integration.WebApi;
 using System.Reflection;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+using WebApiTypeScript.Business;
 using WebApiTypeScript.Core;
+using WebApiTypeScript.Core.Interfaces.Repository.Query;
+using WebApiTypeScript.Core.Interfaces.Services.Query;
+using WebApiTypeScript.Data.AppContext;
+using WebApiTypeScript.Data.Repository.Generic;
 using WebApiTypeScript.Registration;
 
 namespace WebApiTypeScript
