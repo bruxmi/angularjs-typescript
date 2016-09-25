@@ -17,6 +17,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_Business", "02_Business"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTypeScript.Business", "WebApiTypeScript.Business\WebApiTypeScript.Business.csproj", "{68BB7469-EB86-46F7-A4E4-982CB24FE151}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Data", "03_Data", "{F16F4860-86A5-4EFE-B565-0A4F4E3BBCEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTypeScript.Data.Repository", "WebApiTypeScript.Data.Repository\WebApiTypeScript.Data.Repository.csproj", "{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTypeScript.Data.AppContext", "WebApiTypeScript.Data.AppContext\WebApiTypeScript.Data.AppContext.csproj", "{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +45,14 @@ Global
 		{68BB7469-EB86-46F7-A4E4-982CB24FE151}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68BB7469-EB86-46F7-A4E4-982CB24FE151}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68BB7469-EB86-46F7-A4E4-982CB24FE151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +62,7 @@ Global
 		{8B37FD16-4249-4B91-BDC4-C343BA551CEA} = {6E60A94B-5F2D-4C44-A03A-74FE53D5F50F}
 		{0BAB10E5-1756-4559-8A76-A237BB8157C5} = {6E60A94B-5F2D-4C44-A03A-74FE53D5F50F}
 		{68BB7469-EB86-46F7-A4E4-982CB24FE151} = {CB658457-7EDC-4A47-8A33-A44CE16F1640}
+		{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1} = {F16F4860-86A5-4EFE-B565-0A4F4E3BBCEE}
+		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3} = {F16F4860-86A5-4EFE-B565-0A4F4E3BBCEE}
 	EndGlobalSection
 EndGlobal

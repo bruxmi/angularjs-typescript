@@ -4,11 +4,11 @@ using WebApiTypeScript.Core.Interfaces.Services.Query;
 
 namespace WebApiTypeScript.Registration.Container
 {
-	public static class AppContainerUser
+	public class AppContainerUser: Module
 	{
-		public static void InjectUser(this ContainerBuilder container)
+		protected override void Load(ContainerBuilder builder)
 		{
-			container.RegisterType<UserQueryService>().As<IUserQueryService>().InstancePerRequest();
+			builder.RegisterType<UserQueryService>().As<IUserQueryService>().InstancePerRequest();
 		}
 	}
 }

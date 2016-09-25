@@ -7,7 +7,8 @@ namespace WebApiTypeScript.Registration
 	{
 		public static void InitializeProduction(this ContainerBuilder builder)
 		{
-			AppContainerUser.InjectUser(builder);
+			builder.RegisterModule(new GenericRepositoryContainer());
+			builder.RegisterModule(new AppContainerUser());
 		}
 	}
 }
