@@ -14,7 +14,7 @@ namespace WebApiTypeScript.Api
 {
 	public class UserQueryController: ApiController
 	{
-		public UserQueryController()
+		public UserQueryController(IQueryRepository<User> repository)
 		{
 			//ist nur als test zu checken wieso er das ding nicht erzeugen kann 
 			var b = AppContainer.Current.Resolve<IQueryRepository<User>>();

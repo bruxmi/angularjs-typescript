@@ -7,11 +7,6 @@ namespace WebApiTypeScript.Data.AppContext
 
 	public class WebApiTypeScriptContext : DbContext
 	{
-		public WebApiTypeScriptContext()
-			: base("name=WebApiTypeScriptContext")
-		{ 
-
-		}
 
 		public virtual DbSet<User> User { get; set; }
 	}
