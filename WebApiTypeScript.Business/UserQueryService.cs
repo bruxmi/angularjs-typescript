@@ -11,11 +11,11 @@ namespace WebApiTypeScript.Business
 {
 	public class UserQueryService : IUserQueryService
 	{
-		//private readonly IQueryRepository<User> userQueryRepository;
-		//public UserQueryService(IQueryRepository<User> userQueryRepository)
-		//{
-		//	this.userQueryRepository = userQueryRepository;
-		//}
+		private readonly IQueryRepository<User> userQueryRepository;
+		public UserQueryService(IQueryRepository<User> userQueryRepository)
+		{
+			this.userQueryRepository = userQueryRepository;
+		}
 
 		public async Task<List<User>> GetAllUserAsync()
 		{
@@ -30,7 +30,7 @@ namespace WebApiTypeScript.Business
 
 		public async Task<User> GetUserByIdAsync(int id)
 		{
-			var users = new List<User> { new User { FirstName = "Sarah", LastName = "Musterfrau", Id = 2 } };
+			var users = new List<User> { new User { FirstName = "Sarah", LastName = "Musterfrau", Id = 1 } };
 			var result = users.FirstOrDefault(a => a.Id == id);
 			return await Task.FromResult(result);
 		}
