@@ -51,6 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201609271223140_InitialCreate.cs" />
+    <Compile Include="Migrations\201609271223140_InitialCreate.Designer.cs">
+      <DependentUpon>201609271223140_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609271321495_AddedCourseEntity.cs" />
+    <Compile Include="Migrations\201609271321495_AddedCourseEntity.Designer.cs">
+      <DependentUpon>201609271321495_AddedCourseEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="WebApiTypeScriptContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,6 +72,14 @@
       <Project>{8B37FD16-4249-4B91-BDC4-C343BA551CEA}</Project>
       <Name>WebApiTypeScript.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201609271223140_InitialCreate.resx">
+      <DependentUpon>201609271223140_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609271321495_AddedCourseEntity.resx">
+      <DependentUpon>201609271321495_AddedCourseEntity.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

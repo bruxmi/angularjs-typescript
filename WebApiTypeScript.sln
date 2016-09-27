@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTypeScript", "WebApiTypeScript\WebApiTypeScript.csproj", "{F71038F6-997E-4A8A-94BF-B60AA4E87B1B}"
 EndProject
@@ -22,6 +22,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTypeScript.Data.Repository", "WebApiTypeScript.Data.Repository\WebApiTypeScript.Data.Repository.csproj", "{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTypeScript.Data.AppContext", "WebApiTypeScript.Data.AppContext\WebApiTypeScript.Data.AppContext.csproj", "{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99_Tests", "99_Tests", "{D131D9A7-8AB2-49BC-BEA0-D3294CD698D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTypeScript.IntegrationTest", "WebApiTypeScript.IntegrationTest\WebApiTypeScript.IntegrationTest.csproj", "{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,10 @@ Global
 		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,5 +72,6 @@ Global
 		{68BB7469-EB86-46F7-A4E4-982CB24FE151} = {CB658457-7EDC-4A47-8A33-A44CE16F1640}
 		{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1} = {F16F4860-86A5-4EFE-B565-0A4F4E3BBCEE}
 		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3} = {F16F4860-86A5-4EFE-B565-0A4F4E3BBCEE}
+		{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9} = {D131D9A7-8AB2-49BC-BEA0-D3294CD698D6}
 	EndGlobalSection
 EndGlobal

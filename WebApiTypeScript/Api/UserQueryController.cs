@@ -15,11 +15,6 @@ namespace WebApiTypeScript.Api
 {
 	public class UserQueryController: BaseApiController<IUserQueryService>
 	{
-		private readonly IUserQueryService userQueryService;
-		public UserQueryController(IUserQueryService userQueryService)
-		{
-			this.userQueryService = userQueryService;
-		}
 		public async Task<IHttpActionResult> GetUsers()
         {
 			var users = await this.Service.GetAllUserAsync();

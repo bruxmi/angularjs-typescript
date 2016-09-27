@@ -65,8 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Generic\QueryRepository.cs" />
-    <Compile Include="Generic\QueryRepositoryBase.cs" />
+    <Compile Include="Generic\Command\DynamicSqlCommandRepository.cs" />
+    <Compile Include="Generic\Command\CommandRepository.cs" />
+    <Compile Include="Generic\Command\CommandRepositoryBase.cs" />
+    <Compile Include="Generic\Query\DynamicSqlQueryRepository.cs" />
+    <Compile Include="Generic\Query\QueryRepository.cs" />
+    <Compile Include="Generic\Query\QueryRepositoryBase.cs" />
     <Compile Include="Generic\RepositoryBaseInitializer.cs" />
     <Compile Include="Generic\RepositoryAppInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +89,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

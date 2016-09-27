@@ -54,9 +54,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContainer.cs" />
+    <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Enums\Sort.cs" />
+    <Compile Include="Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Extensions\DbContextExtensions.cs" />
     <Compile Include="Extensions\LinqOrderBy.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Interfaces\Repository\Command\IAddCommandRepository.cs" />
+    <Compile Include="Interfaces\Repository\Command\ICommandRepository.cs" />
+    <Compile Include="Interfaces\Repository\Command\IDeleteCommandRepository.cs" />
+    <Compile Include="Interfaces\Repository\Command\IDynamicSqlCommandRepository.cs" />
+    <Compile Include="Interfaces\Repository\Command\IUpdateCommandRepository.cs" />
+    <Compile Include="Interfaces\Repository\Query\IDynamicSqlQueryRepository.cs" />
     <Compile Include="Interfaces\Repository\Query\IQueryRepository.cs" />
     <Compile Include="Interfaces\Services\Query\IRepositoryInitializer.cs" />
     <Compile Include="Interfaces\Services\Query\IUserQueryService.cs" />
@@ -66,9 +76,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\Repository\Command\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
