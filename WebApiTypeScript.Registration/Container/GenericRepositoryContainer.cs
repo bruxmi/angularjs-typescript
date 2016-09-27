@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace WebApiTypeScript.Registration.Container
 	{
 		protected override void Load(ContainerBuilder builder)
 		{
-			builder.RegisterType<WebApiTypeScriptContext>().InstancePerLifetimeScope();
+			builder.RegisterType<WebApiTypeScriptContext>().As<DbContext>().InstancePerLifetimeScope();
 			builder.RegisterGeneric(typeof(RepositoryAppInitializer<>)).As(typeof(IRepositoryInitializer<>)).InstancePerLifetimeScope();
 			builder.RegisterGeneric(typeof(QueryRepository<>)).As(typeof(IQueryRepository<>)).InstancePerLifetimeScope();
 			base.Load(builder);
