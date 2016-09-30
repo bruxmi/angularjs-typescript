@@ -38,7 +38,7 @@ namespace WebApiTypeScript.IntegrationTest
         {
             DbContext = data.GetDbContext();
             DynamicSqlCommandRepository = new DynamicSqlCommandRepository(DbContext);
-            UserQueryRepository = new QueryRepository<User>(new RepositoryAppInitializer<User>(DbContext));
+            UserQueryRepository = new QueryRepository<User>(new RepositoryWebApiTypeScriptInitializer<User>(DbContext));
             UserCommandRepository = new CommandRepository<User>(DbContext);
             Initialized = true;
         }

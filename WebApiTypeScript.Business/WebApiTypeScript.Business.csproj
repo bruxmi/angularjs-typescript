@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationSettings\ApplicationSettingQueryService.cs" />
+    <Compile Include="ApplicationSettings\ConnectionStringQueryService.cs" />
     <Compile Include="UserQueryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

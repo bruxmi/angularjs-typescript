@@ -42,9 +42,15 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,23 +60,51 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContainer.cs" />
+    <Compile Include="Constants\DbConstants.cs" />
+    <Compile Include="Constants\DbCreationConfigurationNames.cs" />
+    <Compile Include="Constants\HttpContextItems.cs" />
+    <Compile Include="Constants\LogConfigurationNames.cs" />
+    <Compile Include="Entities\Application\ApplicationSetting.cs" />
+    <Compile Include="Entities\Application\ConnectionString.cs" />
+    <Compile Include="Entities\Application\Log.cs" />
     <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Enums\BuildConfiguration.cs" />
+    <Compile Include="Enums\LogMode.cs" />
     <Compile Include="Enums\Sort.cs" />
+    <Compile Include="Exceptions\BaseAppException.cs" />
     <Compile Include="Extensions\AssemblyExtensions.cs" />
     <Compile Include="Extensions\DbContextExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
     <Compile Include="Extensions\LinqOrderBy.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Interfaces\ILog.cs" />
     <Compile Include="Interfaces\Repository\Command\IAddCommandRepository.cs" />
     <Compile Include="Interfaces\Repository\Command\ICommandRepository.cs" />
     <Compile Include="Interfaces\Repository\Command\IDeleteCommandRepository.cs" />
     <Compile Include="Interfaces\Repository\Command\IDynamicSqlCommandRepository.cs" />
     <Compile Include="Interfaces\Repository\Command\IUpdateCommandRepository.cs" />
     <Compile Include="Interfaces\Repository\Query\IDynamicSqlQueryRepository.cs" />
+    <Compile Include="Interfaces\Repository\Query\IQueryApplicationSettingsRepository.cs" />
     <Compile Include="Interfaces\Repository\Query\IQueryRepository.cs" />
+    <Compile Include="Interfaces\Services\IExceptionHandlerService.cs" />
+    <Compile Include="Interfaces\Services\Query\IApplicationSettingQueryService.cs" />
+    <Compile Include="Interfaces\Services\Query\IConnectionStringQueryService.cs" />
+    <Compile Include="Interfaces\Services\Query\IRepositoryApplicationSettingInitializer.cs" />
     <Compile Include="Interfaces\Services\Query\IRepositoryInitializer.cs" />
+    <Compile Include="Interfaces\Services\Query\IAppConfigurationService.cs" />
     <Compile Include="Interfaces\Services\Query\IUserQueryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ExceptionHandlerService.cs" />
+    <Compile Include="Services\Logging\Log4NetAdapter.cs" />
+    <Compile Include="Services\Logging\Log4NetContextDecorator.cs" />
+    <Compile Include="Services\Logging\Log4NetDatabaseFactory.cs" />
+    <Compile Include="Services\Logging\Log4NetLevel.cs" />
+    <Compile Include="Services\AppConfigurationService.cs" />
+    <Compile Include="AppConfiguration.cs" />
+    <Compile Include="AppExceptionHandler.cs" />
+    <Compile Include="AppLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

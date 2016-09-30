@@ -27,6 +27,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99_Tests", "99_Tests", "{D1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTypeScript.IntegrationTest", "WebApiTypeScript.IntegrationTest\WebApiTypeScript.IntegrationTest.csproj", "{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTypeScript.Data.ApplicationSettingsContext", "WebApiTypeScript.Data.ApplicationSettingsContext\WebApiTypeScript.Data.ApplicationSettingsContext.csproj", "{60CA774D-B834-4C2C-A53B-C271BD68D9CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{CBE23ECA-D696-4EDA-8BF0-8E427CD99A40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionScripts", "SolutionScripts", "{31A2BA7D-9114-4759-A27E-680EA97E94E5}"
+	ProjectSection(SolutionItems) = preProject
+		SolutionScripts\AddApplicationMigration.ps1 = SolutionScripts\AddApplicationMigration.ps1
+		SolutionScripts\AddTenantMigration.ps1 = SolutionScripts\AddTenantMigration.ps1
+		SolutionScripts\CreateDatabase.ps1 = SolutionScripts\CreateDatabase.ps1
+		SolutionScripts\CreateDatabase.sql = SolutionScripts\CreateDatabase.sql
+		SolutionScripts\UpdateApplicationDatabase.ps1 = SolutionScripts\UpdateApplicationDatabase.ps1
+		SolutionScripts\UpdateDatabases.ps1 = SolutionScripts\UpdateDatabases.ps1
+		SolutionScripts\UpdateTenantDatabase.ps1 = SolutionScripts\UpdateTenantDatabase.ps1
+		SolutionScripts\UpdateTestApplicationDatabase.ps1 = SolutionScripts\UpdateTestApplicationDatabase.ps1
+		SolutionScripts\UpdateTestTenantDatabase.ps1 = SolutionScripts\UpdateTestTenantDatabase.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +78,10 @@ Global
 		{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60CA774D-B834-4C2C-A53B-C271BD68D9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60CA774D-B834-4C2C-A53B-C271BD68D9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60CA774D-B834-4C2C-A53B-C271BD68D9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60CA774D-B834-4C2C-A53B-C271BD68D9CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,5 +94,8 @@ Global
 		{011796CD-C41F-4EF4-9E5B-5FC281C6A7F1} = {F16F4860-86A5-4EFE-B565-0A4F4E3BBCEE}
 		{BB80EE5F-C85A-4463-A8EB-3A3234664FE3} = {F16F4860-86A5-4EFE-B565-0A4F4E3BBCEE}
 		{DA2E63F0-71AD-4F3E-B25D-851B9A2AAAA9} = {D131D9A7-8AB2-49BC-BEA0-D3294CD698D6}
+		{60CA774D-B834-4C2C-A53B-C271BD68D9CD} = {F16F4860-86A5-4EFE-B565-0A4F4E3BBCEE}
+		{CBE23ECA-D696-4EDA-8BF0-8E427CD99A40} = {6E60A94B-5F2D-4C44-A03A-74FE53D5F50F}
+		{31A2BA7D-9114-4759-A27E-680EA97E94E5} = {CBE23ECA-D696-4EDA-8BF0-8E427CD99A40}
 	EndGlobalSection
 EndGlobal

@@ -1,9 +1,9 @@
-﻿namespace KPMG.DE.Traction.Core.Interfaces.Repositories.Command
-{
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
-    public interface IAddCommandRepository<T>
+namespace WebApiTypeScript.Core.Interfaces.Repository.Command
+{
+	public interface IAddCommandRepository<T>
         where T : class
     {
         Task AddAsync(T entity);

@@ -39,7 +39,7 @@ namespace WebApiTypeScript.IntegrationTest
         {
             DbContext = data.GetDbContext();
             UserCommandRepository = new CommandRepository<User>(DbContext);
-            UserQueryRepository = new QueryRepository<User>(new RepositoryAppInitializer<User>(this.DbContext));
+            UserQueryRepository = new QueryRepository<User>(new RepositoryWebApiTypeScriptInitializer<User>(this.DbContext));
             Initialized = true;
         }
 

@@ -65,6 +65,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Container\ApplicationSettingContainer.cs" />
+    <Compile Include="Container\LoggerContainer.cs" />
+    <Compile Include="Container\MiscContainer.cs" />
     <Compile Include="Container\UserContainer.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Container\GenericRepositoryContainer.cs" />
@@ -86,6 +89,10 @@
     <ProjectReference Include="..\WebApiTypeScript.Data.AppContext\WebApiTypeScript.Data.AppContext.csproj">
       <Project>{BB80EE5F-C85A-4463-A8EB-3A3234664FE3}</Project>
       <Name>WebApiTypeScript.Data.AppContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebApiTypeScript.Data.ApplicationSettingsContext\WebApiTypeScript.Data.ApplicationSettingsContext.csproj">
+      <Project>{60CA774D-B834-4C2C-A53B-C271BD68D9CD}</Project>
+      <Name>WebApiTypeScript.Data.ApplicationSettingsContext</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebApiTypeScript.Data.Repository\WebApiTypeScript.Data.Repository.csproj">
       <Project>{011796cd-c41f-4ef4-9e5b-5fc281c6a7f1}</Project>
