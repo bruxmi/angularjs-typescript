@@ -35,14 +35,13 @@ namespace WebApiTypeScript.Data.ApplicationSettingsContext.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Message = c.String(),
+                        MessageTemplate = c.String(),
                         Date = c.DateTime(nullable: false),
                         Exception = c.String(),
                         Level = c.String(maxLength: 50),
-                        Logger = c.String(maxLength: 255),
-                        Message = c.String(),
                         RequestId = c.String(maxLength: 50),
-                        TenantName = c.String(maxLength: 255),
-                        Thread = c.String(maxLength: 255),
+                        UserName = c.String(maxLength: 255),
                     })
                 .PrimaryKey(t => t.Id);
             

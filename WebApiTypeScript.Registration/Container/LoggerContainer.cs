@@ -7,7 +7,7 @@ namespace WebApiTypeScript.Registration.Container
 	{
 		protected override void Load(ContainerBuilder builder)
 		{
-			builder.RegisterInstance(AppLogger.Current);
+			builder.RegisterInstance(SerligLogger.Current);
 			base.Load(builder);
 		}
 	}

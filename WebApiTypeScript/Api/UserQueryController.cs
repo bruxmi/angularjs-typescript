@@ -18,7 +18,6 @@ namespace WebApiTypeScript.Api
 		public async Task<IHttpActionResult> GetUsers()
         {
 			var users = await this.Service.GetAllUserAsync();
-			throw new Exception("deine mom");
 			return Ok(users);
         }
 

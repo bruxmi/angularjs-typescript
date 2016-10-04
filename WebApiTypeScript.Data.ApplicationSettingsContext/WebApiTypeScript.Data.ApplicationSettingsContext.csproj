@@ -52,9 +52,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettingContext.cs" />
-    <Compile Include="Migrations\201609290837251_InitialCreate.cs" />
-    <Compile Include="Migrations\201609290837251_InitialCreate.Designer.cs">
-      <DependentUpon>201609290837251_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201610040842181_InitialCreate.cs" />
+    <Compile Include="Migrations\201610040842181_InitialCreate.Designer.cs">
+      <DependentUpon>201610040842181_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610040845205_ChangedDateTypeInLogs.cs" />
+    <Compile Include="Migrations\201610040845205_ChangedDateTypeInLogs.Designer.cs">
+      <DependentUpon>201610040845205_ChangedDateTypeInLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610040945282_change.cs" />
+    <Compile Include="Migrations\201610040945282_change.Designer.cs">
+      <DependentUpon>201610040945282_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610040953118_change2.cs" />
+    <Compile Include="Migrations\201610040953118_change2.Designer.cs">
+      <DependentUpon>201610040953118_change2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,18 +82,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201609290837251_InitialCreate.resx">
-      <DependentUpon>201609290837251_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610040842181_InitialCreate.resx">
+      <DependentUpon>201610040842181_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610040845205_ChangedDateTypeInLogs.resx">
+      <DependentUpon>201610040845205_ChangedDateTypeInLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610040945282_change.resx">
+      <DependentUpon>201610040945282_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610040953118_change2.resx">
+      <DependentUpon>201610040953118_change2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SQL\Data\Cleanup.sql" />
-    <EmbeddedResource Include="SQL\Data\Debug\SeedBuildConfiguration.sql" />
     <EmbeddedResource Include="SQL\Data\Seed.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="SQL\Data\Debug\SeedBuildConfiguration.sql" />
     <Content Include="SQL\Schema\GrantAccessToAccounts.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
