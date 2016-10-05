@@ -1,7 +1,9 @@
-﻿using Serilog.Core;
+﻿using Autofac;
+using Serilog.Core;
 using Serilog.Events;
 using System.Web;
 using WebApiTypeScript.Core.Constants;
+using WebApiTypeScript.Core.Interfaces.Services.Query;
 
 namespace WebApiTypeScript.Core.Services.Logging.Serilog
 {
@@ -12,18 +14,16 @@ namespace WebApiTypeScript.Core.Services.Logging.Serilog
 
 		public void Enrich(LogEvent logEvent, ILogEventPropertyFactory propertyFactory)
 		{
-			this.cachedRequestId = this.cachedRequestId ?? propertyFactory.CreateProperty(RequestIdProperty, this.GetRequestId());
-			logEvent.AddPropertyIfAbsent(cachedRequestId);
+
+			this.cachedRequestId = propertyFactory.CreateProperty(RequestIdProperty, this.GetRequestId());
+			logEvent.AddOrUpdateProperty(cachedRequestId);
 		}
 
 		private string GetRequestId()
 		{
-			if (HttpContext.Current != null)
-			{
-				var result =  (string)HttpContext.Current.Items[HttpContextItems.REQUEST_ID] ?? string.Empty;
-				return result;
-			}
-			return string.Empty;
+			var contextService = AppContainer.Current.Resolve<IContextService>();
+			var result = contextService.RequestId ?? string.Empty;
+			return result;
 		}
 	}
 }

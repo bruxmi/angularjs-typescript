@@ -11,6 +11,7 @@ namespace WebApiTypeScript.Registration.Container
 		{
 			builder.RegisterType<AppConfigurationService>().As<IAppConfigurationService>().InstancePerLifetimeScope();
 			builder.RegisterType<ExceptionHandlerService>().As<IExceptionHandlerService>();
+			builder.RegisterType<ContextService>().As<IContextService>().InstancePerLifetimeScope();
 			base.Load(builder);
 		}
 	}

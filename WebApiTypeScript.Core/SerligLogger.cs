@@ -49,7 +49,7 @@ namespace WebApiTypeScript.Core
 				connectionString: AppConfiguration.Current.ApplicationConnectionString, 
 				tableName: "Log", 
 				columnOptions : columns, 
-				restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Debug);
+				restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Error);
 
 			return new SerilogAdapter(config.CreateLogger());
 		}
